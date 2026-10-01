@@ -11,10 +11,12 @@ on:
         description: 'Target environment'
         required: true
         default: 'staging'
-        type: choice          # renders a dropdown in the UI
+        type: choice        # renders a dropdown in the UI
         options:
           - staging
           - production
+          - built
+          - deployment
       version:
         description: 'Version to deploy (e.g. 1.4.0)'
         required: false
