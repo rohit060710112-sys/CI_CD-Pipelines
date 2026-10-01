@@ -2,7 +2,8 @@ name: 07 - Scheduled Run
 
 on:
   schedule:
-    - cron: '5 * * * *'      
+    - cron: '50 15 * * *'  
+      timezone: "Asia/Kolkata"
 
 jobs:
   scheduled-task:
