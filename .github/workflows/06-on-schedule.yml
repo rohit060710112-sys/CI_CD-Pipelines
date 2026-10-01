@@ -1,5 +1,8 @@
 name: Check VM Time
 
+on:
+  workflow_dispatch:
+
 jobs:
   check-time:
     runs-on: ubuntu-latest
