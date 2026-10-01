@@ -1,0 +1,9 @@
+name: Check VM Time
+
+jobs:
+  check-time:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show VM time
+        run: date
