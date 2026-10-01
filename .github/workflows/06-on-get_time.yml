@@ -1,4 +1,4 @@
-name: Check VM Time
+name: 06 - Check VM Time
 
 on:
   workflow_dispatch:
