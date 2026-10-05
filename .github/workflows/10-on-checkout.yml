@@ -1,0 +1,19 @@
+name: 10 - Checkout
+
+on: workflow_dispatch
+
+jobs:
+  without-checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Try to list files BEFORE checkout
+        run: ls -la          # your repo files are missing here
+
+  with-checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v5      # current major version (Node 24 runtime)
+
+      - name: List files AFTER checkout
+        run: ls -la          # now your repo files are present
