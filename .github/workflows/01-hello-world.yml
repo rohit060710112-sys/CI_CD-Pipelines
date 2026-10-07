@@ -7,7 +7,9 @@
 #   steps -> the ordered list of commands inside a job
 
 name: 01 - Hello World
-
+branding:
+  icon: 'package'
+  color: 'green'
 on: workflow_dispatch   # "Run workflow" button in the Actions tab (manual trigger)
 
 jobs:
