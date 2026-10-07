@@ -1,22 +1,21 @@
-# 01 - Hello World
-# The smallest possible workflow. Learn the 5 building blocks:
-#   name  -> the workflow's display name in the Actions tab
-#   on    -> the EVENT that triggers the workflow
-#   jobs  -> a workflow has one or more jobs (they run in parallel by default)
-#   runs-on -> which runner (virtual machine) the job runs on
-#   steps -> the ordered list of commands inside a job
-
 name: 01 - Hello World
 
-on: workflow_dispatch   # "Run workflow" button in the Actions tab (manual trigger)
+on: workflow_dispatch
 
 jobs:
-  say-hello:                     # <- job id (you choose this name)
-    runs-on: ubuntu-latest       # <- GitHub-hosted Linux runner
+  say-hello:
+    runs-on: ubuntu-latest
+
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Print a greeting
         run: echo "Hello, GitHub Actions! 👋"
-      - uses: ./actions/node-ci-setup/action.yaml
+
+      - name: Setup Node
+        uses: ./actions/node-ci-setup
+
       - name: Print multiple lines
         run: |
           echo "This step runs several shell commands."
