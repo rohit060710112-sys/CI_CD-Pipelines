@@ -1,7 +1,20 @@
 name: 'Node CI Setup'
 description: 'Installs Node, restores the npm cache, and installs dependencies.'
 
-# Optional but nice: shows up in the Actions UI.
 branding:
   icon: 'package'
   color: 'green'
+
+runs:
+  using: composite
+
+  steps:
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: npm
+
+    - name: Install dependencies
+      run: npm ci
+      shell: bash
