@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Print a greeting
         run: echo "Hello, GitHub Actions! 👋"
-
+      - uses: ./actions/node-ci-setup/action.yaml
       - name: Print multiple lines
         run: |
           echo "This step runs several shell commands."
