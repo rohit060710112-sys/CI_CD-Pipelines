@@ -1,0 +1,7 @@
+name: 'Node CI Setup'
+description: 'Installs Node, restores the npm cache, and installs dependencies.'
+
+# Optional but nice: shows up in the Actions UI.
+branding:
+  icon: 'package'
+  color: 'green'
